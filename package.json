@@ -25,7 +25,7 @@
     "@types/faker": "^5.5.8",
     "@types/mocha": "^9.0.0",
     "@types/redis": "^2.8.31",
-    "cache-bridge": "0.0.2",
+    "cache-bridge": "0.0.4",
     "chai": "^4.3.4",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
