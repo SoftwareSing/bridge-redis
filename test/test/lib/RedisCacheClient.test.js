@@ -172,4 +172,25 @@ describe('RedisCacheClient', function () {
       }
     })
   })
+
+  describe('getMany()', function () {
+    it('should return empty array if keyList is an empty array', async function () {
+      const result = await redisCacheClient.getMany([])
+      expect(result).to.deep.equal([])
+    })
+  })
+
+  describe('setMany()', function () {
+    it('should return a resolved promise if there is nothing to set', async function () {
+      const result = await redisCacheClient.setMany(new Map(), ttl)
+      expect(result).to.equal(undefined)
+    })
+  })
+
+  describe('delMany()', function () {
+    it('should return a resolved promise even keyList is an empty array', async function () {
+      const result = await redisCacheClient.delMany([])
+      expect(result).to.equal(undefined)
+    })
+  })
 })
